@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: '微软雅黑';
+    }
+
+    .logo {
+      width: 900px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: #fe9ab5;
+    }
+    a {
+      display: inline-block;
+      color: #fff;
+      padding: 0 50px;
+    }
+
+    .nav-bg {
+      height: 60px;
+      background-color: #fe668f;
+    }
+
+    .nav {
+      width: 900px;
+      line-height: 60px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .nav li {
+      float: left;
+    }
+
+    .banner {
+      width: 900px;
+      height: 429px;
+      margin: 0 auto;
+      background: url(images/banner.jpg) no-repeat top center;
+    }
+
+    .hint {
+      width: 900px;
+      height: 60px;
+      line-height: 60px;
+      margin: 0 auto;
+    }
+
+    .content {
+      background: url(images/step.jpg) no-repeat center;
+      padding-left: 150px;
+    }
+
+    .content h2 {
+      font-weight: 100;
+      color: #db7e7f;
+    }
+
+    .account-info {
+      width: 900px;
+      margin: 0 auto;
+      color: #e79789;
+      background: url(images/content_bg.jpg);
+    }
+
+    .account-info h2 {
+      color: #e3a3a2;
+      font-weight: 200;
+      margin-bottom: 10px;
+    }
+
+    .account-info input {
+      line-height: 28px;
+      /* +指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。 */
+      vertical-align: middle;
+      border: 1px solid #db7e7f;
+      padding: 0 5px;
+    }
+
+    .account-info hr {
+      width: 70%;
+    }
+
+    .account-info label {
+      display: block;
+      margin-left: 50px;
+      padding: 10px 20px;
+    }
+
+    #nickname-label {
+      padding-left: 3.2rem;
+    }
+
+    #email,
+    #phone,
+    #passwd,
+    #nickname {
+      width: 350px;
+    }
+
+    #gender-label {
+      margin-top: 10px;
+      padding-left: 3.2rem;
+    }
+
+    #xueli-label {
+      padding-left: 3.2rem;
+    }
+
+    #ziwojieshao-labal {
+      position: relative;
+    }
+
+    .left {
+      position: absolute;
+      top: 50%;
+      /* 将顶部定位到textarea的中间 */
+      transform: translateY(-50%);
+      /* +通过向上移动自身高度的一半来垂直居中 */
+    }
+
+    textarea {
+      width: 480px;
+      height: 200px;
+      resize: none;
+      border: 1px solid #dd8787;
+      font-size: 12px;
+      color: #aaa;
+      padding: 20px;
+      margin-left: 5rem;
+    }
+    select{
+      width: 180px;
+      color: #dd8787;
+      border: 1px solid #dd8787;
+    }
+    button{
+      width: 166px;
+      height: 46px;
+      background: url(images/btn.jpg) no-repeat;
+      border: none;
+      margin-left: 300px;
+      margin-bottom: 160px;
+    }
+    .footer{
+      height: 110px;
+      background-color: #fe668f;
+      text-align: center;
+      padding-top: 40px;
+      color: #fffff4;
+      line-height: 26px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="" srcset="">
+    </div>
+    <div class="nav-bg">
+      <ul class="nav">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">会员</a></li>
+        <li><a href="#">活动</a></li>
+        <li><a href="#">直播</a></li>
+        <li><a href="#">视频</a></li>
+        <li><a href="#">注册</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="banner"></div>
+    <div class="hint">
+      <div class="content">
+        <h2>注册步骤：</h2>
+      </div>
+    </div>
+    <div class="account-info">
+      <form action="">
+        <h2>您的账号信息: </h2>
+        <hr color="#e3a3a2">
+        <label for="way1">
+          注册方式：
+          <input type="radio" name="way" id="way1" value="">E-mail-注册&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="way" id="way" value="">手机号码注册
+        </label>
+        <label for="email">
+          注册邮箱：<input type="email" name="email" id="email">
+        </label>
+        <label for="phone">
+          注册手机：<input type="text" name="phone" id="phone">
+        </label>
+        <label for="passwd">
+          登录密码：<input type="password" name="passwd" id="passwd">
+        </label>
+        <label for="nickname" id="nickname-label">
+          昵称：<input type="text" name="nickname" id="nickname">
+        </label>
+        <h2>您的个人信息: </h2>
+        <hr color="#e3a3a2">
+        <label for="man" id="gender-label">
+          性别：
+          <input type="radio" name="gender" id="man">男&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="gender" id="female">女
+        </label>
+        <label for="xueli" id="xueli-label">
+          学历：
+          <select name="" id="xueli">
+            <option value="0"> -请选择- </option>
+            <option value="1">中职/高中</option>
+            <option value="2">专科/本科</option>
+            <option value="3">硕士研究生</option>
+            <option value="4">博士研究生</option>
+          </select>
+        </label>
+        <label for="city">
+          所在城市：
+          <select name="" id="city">
+            <option value="0">-请选择-</option>
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+            <option value="4">深圳</option>
+          </select>
+        </label>
+        <label for="zuqiu">
+          兴趣爱好：
+          <input type="checkbox" name="hobby" id="zuziu">足球&nbsp;&nbsp;
+          <input type="checkbox" name="hobby" id="hobby">篮球&nbsp;&nbsp;
+          <input type="checkbox" name="hobby" id="youyong">游泳&nbsp;&nbsp;
+          <input type="checkbox" name="hobby" id="changge">唱歌&nbsp;&nbsp;
+          <input type="checkbox" name="hobby" id="paobu">跑步&nbsp;&nbsp;
+          <input type="checkbox" name="hobby" id="yujia">瑜伽&nbsp;&nbsp;
+        </label>
+        <label for="ziwojieshao" id="ziwojieshao-labal">
+          <span class="left">自我介绍：</span>
+          <textarea name="ziwojieshao" id="ziwojieshao"></textarea>
+        </label>
+        <button type="submit" ></button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <p>Copyright © 2020-2030 QIANNIANZHILIANcom, All rights reserved.<br />2020-2030，版权所有 千年之恋 85CP备3333</p>
+    </div>
+  </footer>
+</body>
+
+</html>

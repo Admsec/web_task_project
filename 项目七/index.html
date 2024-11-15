@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .banner {
+      width: 1200px;
+      height: 60px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .nav-box {
+      background-color: #000000;
+      height: 50px;
+    }
+
+    .nav {
+      width: 1200px;
+      margin: 0 auto;
+      line-height: 50px;
+    }
+
+    .nav a {
+      display: inline-block;
+      padding: 0 50px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav>ul {
+      list-style: none;
+    }
+
+    .nav>ul>li {
+      float: left;
+    }
+
+    .nav a:hover {
+      background-color: #e8d02d;
+    }
+
+    .main-pic {
+      position: relative;
+      width: 100%;
+      height: 580px;
+    }
+
+    .one {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .main-pic .banner_pic .pic {
+      display: none;
+    }
+
+    .main-pic .banner_pic .current {
+      display: block;
+    }
+
+    .main-pic ol .but {
+      float: left;
+      width: 80px;
+      height: 8px;
+      border: 1px solid #d6d6d6;
+      margin-right: 20px;
+    }
+
+    .main-pic ol li {
+      cursor: pointer;
+    }
+
+    .main-pic ol {
+      position: absolute;
+      list-style: none;
+      left: 50%;
+      top: 90%;
+      transform: translateX(-50%);
+    }
+
+    .main-pic ol .current {
+      background: rgb(111, 111, 193);
+      float: left;
+      width: 80px;
+      height: 8px;
+      border: 1px solid #d6d6d6;
+      margin-right: 20px;
+    }
+
+    .jianjie {
+      width: 940px;
+      height: 500px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .jianjie .title {
+      font-weight: normal;
+      color: #898989;
+      padding-bottom: 40px;
+      border-bottom: 5px solid #ededed;
+    }
+
+    .jianjie-box {
+      position: relative;
+      margin-top: 20px;
+      padding-bottom: 50px;
+    }
+
+    .jianjie-img {
+      position: absolute;
+      top: 20px;
+      left: 0;
+    }
+
+    .jianjie-box h2 {
+      padding-left: 200px;
+      font-weight: normal;
+      color: #e6db67;
+    }
+
+    .jianjie-box p {
+      padding-top: 30px;
+      padding-left: 200px;
+      color: #73737e
+    }
+    .imgBox {
+      margin: 0 auto;
+      width: 940px;
+      padding: 0 20px; 
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .imgBox img{
+      width: 226px;
+      height: 129px;
+      padding: 2px;
+    }
+    .imgBox a{
+      margin-right: 20px;
+    }
+    .tuijian {
+      height: 475px;
+      width: 940px;
+      margin: 0 auto;
+    }
+    .tuijian h2 {
+      margin-top: 30px;
+      color: #898989;
+      font-weight: normal;
+      padding-bottom: 30px;
+      border-bottom: 5px solid #ededed;
+    }
+    .tuijian-box{
+      position: relative;
+      height: 400px;
+    }
+    .tuijian-box ul {
+      list-style: none;
+    }
+    .tuijian img{
+      width: 400px;
+      float: left;
+    }
+    .tuijian .pic {
+      display: none;
+    }
+    .hover{
+      width: 150px;
+      height: 110px;
+      margin-left: 400px;
+      margin-bottom: 2px;
+      cursor: pointer;
+    }
+    .hover-box{
+      width: 100%;
+    }
+    .hover-box-1 {
+      background: url(images/txt_111_1.jpg) no-repeat top center;
+    }
+    .hover-box-2 {
+      background: url(images/txt_222_2.jpg) no-repeat top center;
+    }
+    .hover-box-3 {
+      background: url(images/txt_333_3.jpg) no-repeat top center;
+    }
+    .hover-box-1:hover{
+      background: url(images/txt_111.jpg) no-repeat top center;
+    }
+    .hover-box-2:hover{
+      background: url(images/txt_222.jpg) no-repeat top center;
+    }
+    .hover-box-3:hover{
+      background: url(images/txt_333.jpg) no-repeat top center;
+    }
+    .zhuce{
+      position: absolute;
+      font-family: '微软雅黑';
+      top: 0;
+      height: 315px;
+      margin-top: 20px;
+      width: 390px;
+      margin-left: 550px;
+      background: url(images/zhuce.jpg) no-repeat top center;
+    }
+    .zhuce-form{
+      width: 390px;
+      margin-top: 80px;
+    }
+    .zhuce-form input{
+      padding: 4px 10px;
+      border: 1px solid #d4d4c9;
+      /* 可以解决输入中文时会下移 1 像素的问题 */
+      line-height: 16px;
+    }
+    .zhuce-form label{
+      display: block;
+      margin: 15px;
+      margin-left: 80px;
+    }
+    .zhuce-form select{
+      padding: 4px 25px 4px 5px;
+      border: 1px solid  #d4d4c9;
+    }
+    .button{
+      position: absolute;
+      height: 53px;
+      width: 175px;
+      bottom: 5px;
+      right: 25%;
+      background: url(images/btn.jpg) no-repeat top center;
+      border: none;
+    }
+    .button:hover{
+      cursor: pointer;
+    }
+    .footer{
+      height: 50px;
+      color: #f8faef;
+      background: #000000;
+    }
+
+    .footer{
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <img src="images/logo.png" alt="" srcset="" align="left">
+    <img src="images/phone.jpg" alt="" srcset="" align="right">
+  </div>
+  <div class="nav-box">
+    <div class="nav">
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">港式甜品</a> </li>
+        <li><a href="#">台式甜品</a> </li>
+        <li><a href="#">植物甜品</a> </li>
+        <li><a href="#">广府糖水</a> </li>
+        <li><a href="#">加盟我们</a> </li>
+        <li><a href="#">分店地址</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-pic">
+    <ul class="banner_pic" id="banner_pic">
+      <li class="current"><img class="one" src="images/01.jpg" alt="" srcset=""></li>
+      <li class="pic"><img class="one" src="images/02.jpg" alt="" srcset=""></li>
+      <li class="pic"><img class="one" src="images/03.jpg" alt="" srcset=""></li>
+    </ul>
+    <ol id="button">
+      <li class="current"></li>
+      <li class="but"></li>
+      <li class="but"></li>
+    </ol>
+  </div>
+  <div class="jianjie">
+    <h2 class="title">甜蜜约会品牌简介</h2>
+    <div class="jianjie-box">
+      <img class="jianjie-img" src="images/learn.jpg" alt="" srcset="">
+      <h2>想和甜蜜有个约会吗?</h2>
+      <p>
+        甜品不仅女孩子喜欢，很多男孩子也不例外，在人们越来越会享受生活的今天，甜品品牌发展的可谓风生水起，“甜蜜约会”就是其中一个。1995年，“甜蜜约会”的创始人在西贡区创办了首家港式甜品店，凭借着甜品细腻的口感和独特的风味，获得了很多消费者的青睐。以创新、品质、价格作为营销系理念，“甜蜜约会”很快“俘获”了一大批忠实粉丝，并在2002年于新港中心开设了分店。到2020年，“甜蜜约会”更是在北京、上海、杭州、苏州、珠海、湖南、广州等地区开设了60多家特许经营店，这样的成绩着实耀眼。
+      </p>
+    </div>
+    <div class="imgBox" id="imgBox">
+      <span>
+        <a href="#"><img src="images/1.jpg" alt="" srcset=""></a>
+        <a href="#"><img src="images/2.jpg" alt="" srcset=""></a>
+        <a href="#"><img src="images/3.jpg" alt="" srcset=""></a>
+        <a href="#"><img src="images/4.jpg" alt="" srcset=""></a>
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="tuijian">
+    <h2>甜蜜约会特色美食推荐</h2>
+    <div class="tuijian-box">
+      <div class="tuijian-imgBox">
+        <ul>
+          <li><img class="current" src="images/111.jpg" alt="" srcset=""></li>
+          <li><img class="pic" src="images/222.jpg" alt="" srcset=""></li>
+          <li><img class="pic" src="images/333.jpg" alt="" srcset=""></li>
+        </ul>
+      </div>
+
+      <div class="hover-box" id="hover-box">
+        <ul>
+          <li class="hover-box-1 hover"></li>
+          <li class="hover-box-2 hover"></li>
+          <li class="hover-box-3 hover"></li>
+          
+        </ul>
+      </div>
+      <div class="zhuce">
+        <div class="zhuce-form">
+          <form action="">
+            <label for="username">姓名: <input type="text" name="username" id="username"></label>
+            <label for="phone">手机: <input type="number" name="phone" id="phone"></label>
+            <label for="email">邮箱: <input type="email" name="email" id="email"></label>
+            <label for="address">店址: 
+              <select name="address" id="address">
+                <option value="1" >请选择最近的店铺地址</option>
+                <option value="2" >新疆和田店</option>
+                <option value="3" >西藏尼玛店</option>
+              </select>
+            </label>
+            <button class="button"></button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>甜蜜约会版权所有2020-2036京ICP备2232333号  京公网安备2342434324343</p>
+  </div>
+
+</body>
+<script>
+  window.onload = function () {
+    let index = 0;
+    /*
+    * 鼠标指针碰到对应的按钮就更新图片
+    */
+    function hotUpdate() {
+      let btn_li = document.getElementById("button").getElementsByTagName("li")
+      for (let i = 0; i < btn_li.length; i++) {
+        btn_li.item(i).addEventListener("mouseenter", () => {
+          clearInterval(id_);
+          // 获取 class 为 current 的标签元素
+          let cur_btn = document.getElementById("button").getElementsByClassName("current");
+          // 把 class 改为 but
+          cur_btn.item(0).className = "but";
+          // 鼠标触碰到的那个元素改为 current
+          btn_li.item(i).className = "current";
+          // 更换图片，也是一样的操作
+          let all_pic = document.getElementById("banner_pic").getElementsByTagName("li")
+          let cur_pic = document.getElementById("banner_pic").getElementsByClassName("current");
+          cur_pic.item(0).className = "pic";
+          all_pic.item(i).className = "current"
+          index = i
+        })
+        btn_li.item(i).addEventListener("mouseleave", () => {
+          id_ = setInterval(() => car_map(), 1500)
+        })
+      }
+    }
+    /*
+    * 轮播图
+    */
+    function car_map() {
+      if (++index > 2) {
+        index = 0;
+      }
+      let btn_li = document.getElementById("button").getElementsByTagName("li")
+      let all_pic = document.getElementById("banner_pic").getElementsByTagName("li")
+      let cur_btn = document.getElementById("button").getElementsByClassName("current");
+      let cur_pic = document.getElementById("banner_pic").getElementsByClassName("current");
+      cur_btn.item(0).className = "but";
+      cur_pic.item(0).className = "pic";
+      btn_li.item(index).className = "current";
+      all_pic.item(index).className = "current";
+    }
+    let id_ = setInterval(() => car_map(), 1500)
+
+    function school(){
+    const speed = 1;
+    const imgBox = document.getElementById("imgBox");
+    const span = imgBox.getElementsByTagName("span");
+    imgBox.innerHTML += imgBox.innerHTML;
+    let timer = setInterval(marquee, speed)
+    function marquee(){
+      // 检查`imgBox`的左边界是否已经滚动到超过其第一个`<span>`元素的右边界。如果是，执行括号内的代码。
+      if(imgBox.scrollLeft > span[0].offsetWidth){
+        // 如果上述条件满足，将`imgBox`的左边界重置到最左边。
+        imgBox.scrollLeft = 0;
+      } else {
+        // 如果不满足上述条件，则稍微移动`imgBox`的左边界，产生滚动效果。
+        ++imgBox.scrollLeft;
+      }
+      
+    }
+    imgBox.addEventListener("mouseenter", function(){
+      clearInterval(timer);
+    })
+    imgBox.addEventListener("mouseleave", function(){
+      timer = setInterval(marquee, speed)
+    })
+  }
+
+  function tuijian(){
+    const hover = document.getElementById("hover-box").getElementsByTagName("li");
+    function change(index){
+      /*
+      * 首先获取所有 img 标签元素，然后获取 current 元素，img[index] 元素将变为 current，原来的 current 变成 pic
+      */
+      const img = document.getElementsByClassName("tuijian-imgBox").item(0).getElementsByTagName("img")
+      const currImg = document.getElementsByClassName("tuijian-imgBox").item(0).getElementsByClassName("current")
+      currImg.item(0).className = "pic";
+      img.item(index).className = "current";
+    }
+
+    /*
+    * 鼠标焦点 index = 1 的时候，正好焦点停留在第一个图片上，这是一个巧妙的方法
+    */
+    for (let index = 0; index < hover.length; index++) {
+      hover.item(index).addEventListener("mouseenter", () => {
+        change(index)
+      })
+    }
+    
+  }
+
+  hotUpdate()
+  school()
+  tuijian()
+  }
+
+
+</script>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: #fdfdfd;
+      font-family: '微软雅黑';
+    }
+    .bg {
+      width: 1200px;
+      height: 617px;
+      background-image: url(images/bg.png);
+      margin: 0 auto;
+    }
+    .nav{
+      width: 850px;
+      height: 50px;
+      margin: 0 auto;
+      background-image: url(images/logo.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding: 50px 0 50px 150px;
+    }
+    .nav div {
+      height: 50px;
+      line-height: 50px;
+      float: left;
+      color: #685649;
+      font-size: 16px;
+      padding: 0 30px;
+    }
+    .nav a {
+      text-decoration: none;
+    }
+    .nav .opt:hover{
+      background: rgb(188, 186, 186);
+      cursor: pointer;
+
+    }
+    .nav .search{
+      float: right;
+      width: 200px;
+      height: 30px;
+      background: #fff url(images/f.png) no-repeat 10px center;
+      line-height: 30px;
+      font-size: 14px;
+      border-radius: 100px;
+      color: #aaa;
+    }
+    .dongtai{
+      width: 1200px;
+      height: 555px;
+      margin: 18px auto;
+      background: url(images/dongtai.jpg) no-repeat top center;
+      padding-top: 90px;
+    }
+    main {
+      margin-top: 480px;
+    }
+    .one {
+      width: 284px;
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    .two{
+      max-width: 280px;
+      height: 70px;
+      padding: 0 10px;
+      color: #c5c6c6;
+    }
+    .dongtai .box {
+      float: left;
+      margin: 50px;
+    }
+    .dongtai:hover{
+      border: 10px solid purple;
+    }
+    .summer_life{
+      width: 1200px;
+      height: 400px;
+      margin: 20px auto;
+      background: #e4edf3 url(images/shenghuo.png) no-repeat top center;
+      padding-top: 90px;
+    }
+    .summer_life:hover{
+      border: 10px dashed red;
+    }
+    .big-box{
+      width: 1000px;
+      margin: 0 100px;
+      padding-top: 50px;
+    }
+    .big-box .box{
+      float: left;
+      margin: 0 20px;
+    }
+    .footer{
+      height: 80px;
+      margin-top: 80px;
+      background: url(images/footer_bg.jpg) ;
+      line-height: 30px;
+      color: white;
+    }
+    .footer p {
+      text-align: center;
+    }
+    .erweima{
+      width: 350px;
+      height: 430px;
+      position: fixed;
+      bottom: 30px;
+      right: 370px;
+      background: url(images/erweima.png);
+    }
+    .footer_ul{
+      padding-top: 10px;
+      height: 20px;
+    }
+    .footer_ul li a{
+      color: #aaa;
+      text-decoration: none;
+    }
+    .footer_ul li a:hover{
+      background: grey;
+    }
+    .footer_ul > li{
+      float: left;
+      list-style: none;
+      margin-left: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <div class="nav">
+      <a href="#"><div class="opt">网站首页</div></a>
+      <a href="#dongtai"><div class="opt">热门推荐</div></a>
+      <a href="#summer_life"><div class="opt">夏日生活</div></a>
+      <a href="#footer"><div class="opt">版权信息</div></a>
+      <div class="search">输入商品名称</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="dongtai" id="dongtai">
+      <div class="box">
+        <img src="images/news1.jpg" alt="" srcset="">
+        <h2 class="one">BEST贝达</h2>
+        <p class="two">将杂乱无章的物品收纳到视线之外，在玻璃柜门后展示自己的心爱之物！</p>
+        <img src="images/yinying.jpg" alt="" srcset="" class="yy">
+      </div>
+      <div class="box">
+        <img src="images/news2.jpg" alt="" srcset="">
+        <h2 class="one">PONG波昂</h2>
+        <p class="two">当孩子能做大人做的事，他们会觉得自己很特别也很重要。这也是我们打造PONG波昂儿童扶手椅的原因。现在你们可以并排坐在一起尽情放松了。</p>
+        <img src="images/yinying.jpg" alt="" srcset="">
+      </div>
+      <div class="box">
+        <img src="images/news3.jpg" alt="" srcset="">
+        <h2 class="one">GUNDE冈德尔</h2>
+        <p class="two">一把椅子蕴含多少亮点？这一款，就值得你多看几眼。它可以折叠，但也很安全。它可以承受100公斤的重量，但是本身却很轻盈。</p>
+        <img src="images/yinying.jpg" alt="" srcset="" class="yy">
+      </div>
+    </div>
+    <div class="summer_life" id="summer_life">
+      <div class="big-box">
+        <div class="box">
+          <img src="images/img1.jpg" alt="">
+        </div>
+        <div class="box">
+          <img src="images/img2.jpg" alt="" srcset="">
+        </div>
+        <div class="box">
+          <img src="images/img3.jpg" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="erweima">
+      
+    </div>
+    <div class="footer" id="footer">
+      <ul class="footer_ul">
+        <li><a href="https://www.ikea.cn/cn/zh">宜家家居</a></li>
+        <li><a href="https://www.to8to.com/">土巴兔</a></li>
+        <li><a href="https://www.sumarchome.com/">世邦家具</a></li>
+        <li><a href="https://abc.jia.com/">齐家网</a></li>
+        <li><a href="https://home.163.com/">网易家居</a></li>
+      </ul>
+      <p>爱家居版权所有2016-2026京ICP备2222222号&nbsp;&nbsp;京公网安备22222222222</p>
+    </div>
+  </footer>
+</body>
+</html>
